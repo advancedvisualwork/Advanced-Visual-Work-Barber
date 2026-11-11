@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AVW Barber | Corte, barba e penteado com hora marcada</title>
+<meta name="description" content="Agende seu corte, barba ou penteado na AVW Barber. Escolha o dia e o horário e confirme pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Geist:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="wrap header__in">
+    <a href="#inicio" class="brand" aria-label="AVW Barber, início"><img src="images/logo-mark.png" alt="" width="192" height="128"><span class="display">Barber</span></a>
+    <nav class="nav" aria-label="Principal"><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#agendar">Agendar</a><a href="#contato">Contato</a></nav>
+    <a class="btn btn--sm" href="#agendar">Agendar</a>
+  </div>
+</header>
+
+<main>
+<section id="inicio" class="hero">
+  <span class="ghost-type display" aria-hidden="true">AVW</span>
+  <div class="blade" aria-hidden="true"></div>
+  <div class="pole" aria-hidden="true"><i class="pole__cap pole__cap--t"></i><div class="pole__tube"></div><i class="pole__cap pole__cap--b"></i></div>
+  <div class="wrap">
+    <h1 class="display hero__t">
+      <span class="reveal" style="--d:.1s">Seu corte,</span>
+      <span class="reveal muted" style="--d:.22s">com hora</span>
+      <span class="reveal" style="--d:.34s">marcada.</span>
+    </h1>
+    <div class="hero__row">
+      <p class="lead">Corte, barba e penteado. Você escolhe o serviço, o dia e o horário. Reservou, o horário é seu.</p>
+      <div><a class="btn" href="#agendar">Agendar horário</a><p class="status"><span class="dot"></span>Confirmação pelo WhatsApp</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicos" class="section">
+  <div class="wrap">
+    <h2 class="display h2">Serviços</h2>
+    <p class="muted gal__note">Valores de exemplo. Toque em um corte para agendar.</p>
+    <ul class="gallery" id="serviceList"></ul>
+  </div>
+</section>
+
+<section class="section how">
+  <div class="wrap how__in">
+    <h2 class="display h2">Como<br>funciona</h2>
+    <ol class="steps">
+      <li><span class="display">1</span><div><h3>Escolha</h3><p>Serviço, dia e horário livre, tudo na mesma tela.</p></div></li>
+      <li><span class="display">2</span><div><h3>Reserve</h3><p>O horário escolhido fica bloqueado para os outros clientes.</p></div></li>
+      <li><span class="display">3</span><div><h3>Confirme</h3><p>O WhatsApp abre com a mensagem pronta. É só enviar.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="agendar" class="section book">
+  <div class="wrap">
+    <h2 class="display h2">Agendar</h2>
+    <p class="lead muted book__intro">Horários riscados já foram reservados.</p>
+    <form id="form" class="form" novalidate>
+      <fieldset><legend>Serviço</legend><div class="opts" id="serviceOpts" role="radiogroup" aria-label="Serviço"></div></fieldset>
+      <fieldset><legend>Dia</legend><div class="days" id="days"></div></fieldset>
+      <fieldset><legend>Horário</legend><div class="slots" id="slots"></div></fieldset>
+      <div class="form__end">
+        <label for="name">Seu nome</label>
+        <input id="name" name="name" type="text" autocomplete="given-name" maxlength="40" placeholder="Como devemos te chamar?">
+        <p class="summary" id="summary">Escolha serviço, dia e horário.</p>
+        <button type="submit" class="btn">Reservar e abrir WhatsApp</button>
+        <p class="msg" id="msg" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer id="contato" class="footer">
+  <div class="wrap footer__in">
+    <div><p class="display footer__b">AVW Barber</p><p class="muted" id="hours"></p><p class="muted">Endereço: a definir</p></div>
+    <p class="muted">Site demonstrativo criado pela AVW<br>Desenvolvido por João e Matheus</p>
+  </div>
+</footer>
+<div class="mobile-bar"><a class="btn btn--flat" href="#agendar">Agendar horário</a></div>
+<script src="script.js"></script>
+</body>
+</html>
